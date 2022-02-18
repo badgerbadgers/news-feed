@@ -11,7 +11,8 @@ function TechCrunch(data) {
             <a href={news.url} className="news-card-link">
               <img src={news.urlToImage} className="news-card-image" alt={news.title}></img>
               <h3>{news.title}</h3>
-              <p>{news.description}</p></a>
+              <p>{news.description}</p>
+            </a>
           </div>
           )
         })}

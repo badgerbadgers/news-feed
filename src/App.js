@@ -12,15 +12,16 @@ import TechCrunch from './News/TechCrunch';
 import Navbar from './Navbar';
 import Login from './Login';
 
-/*[] create an app that uses react hooks to get API data and display it on webpage
-  [] create a function or dynamic onclick to change url of api call for different
-    news components
-  [] each news card onclick should direct to news source
-  [] for current date create a new component or pass down variable as a prop
-  [] create individual components for each section such as navbar, API displayed, etc
-  [] use browser router to route to different components, use navbar to navigate
+/*[x] create an app that uses react hooks to get API data and display it on webpage
+  [x] create a function or dynamic onclick to change url of API call for different
+    news components or create separate API calls for each news source.
+  [x] each news card onclick should direct to news source
+  [x] for current date create a new component or pass down variable as a prop
+  [x] create individual components for each section such as navbar, API displayed, etc
+  [x] use browser router to route to different components, use navbar to navigate
   [] create navbar with logo and responsive design
   [] create login page with form validation
+  [] create footer component
   */
 function App() {
   const [newsData, setNewsData] = useState([]);
