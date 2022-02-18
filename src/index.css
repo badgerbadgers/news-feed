@@ -1,0 +1,101 @@
+/* Global settings */
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue','Arial','freesans',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #1A1C1A;
+}
+p {
+  color: #3F3F42;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1rem;
+}
+li {
+  list-style-type: none;
+}
+/* Container for content */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.child {
+  width: 60%;
+  margin: 0 auto;
+}
+/* News Card Component */
+.news-card {
+  /* margin: 1rem 0 1.5rem 0; */
+  padding-bottom: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.375;
+}
+.news-card-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+a.news-card-link {
+  color: #3F3F42;
+}
+.news-card-link:visited {
+  text-decoration: none;
+  color: #1A1C1A;
+}
+.news-card-link, .news-card-link:hover {
+  text-decoration: none;
+}
+/* Navbar Component */
+.navbar-logo {
+  width: 90px;
+  height: 90px;
+}
+.navbar-container {
+  margin: 15px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.nav-link {
+  color: #1A1C1A;
+  text-decoration: none;
+  padding: 5px;
+  margin: 10px;
+  font-weight: bold;
+}
+.nav-link:hover {
+  text-decoration: underline;
+}
+.active {
+  color: #ffffff;
+  background-color: #cc0000;
+  border: 1px solid #cc0000;
+  border-radius: 5%;
+}
+/* viewports */
+@media screen and (max-width: 800px) {
+  .child {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 700px) {
+  .child {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 600px) {
+  .child {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
