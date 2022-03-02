@@ -1,38 +1,162 @@
-.App {
-  text-align: center;
+/* Global settings */
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue','Arial','freesans',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #1A1C1A;
+}
+p {
+  color: #3F3F42;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1rem;
+}
+li {
+  list-style-type: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Container for content */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.child {
+  width: 50%;
+  margin: 0 auto;
+}
+/* News Card Component */
+.news-card {
+  /* margin: 1rem 0 1.5rem 0; */
+  padding-bottom: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.375;
+}
+.news-card-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+a.news-card-link {
+  color: #3F3F42;
+}
+.news-card-link:visited {
+  text-decoration: none;
+  color: #1A1C1A;
+}
+.news-card-link, .news-card-link:hover {
+  text-decoration: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Navbar Component */
+.navbar-logo {
+  width: 90px;
+  height: 90px;
+}
+.navbar-container {
+  margin: 15px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.nav-link {
+  color: #1A1C1A;
+  text-decoration: none;
+  padding: 5px;
+  margin: 10px;
+  font-weight: bold;
+}
+.nav-link:hover {
+  text-decoration: underline;
+}
+.active {
+  color: #ffffff;
+  background-color: #cc0000;
+  border: 1px solid #cc0000;
+  border-radius: 5%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* form */
+.form-header-text {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+  margin: 0;
+}
+.enter-button {
+  width: 100%;
+  padding: 16px;
+  border: 0;
+  border-radius: 4px;
+  background: #cc0000;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.form-link {
+  color: #1A1C1A;
+  text-decoration: none;
+  padding: 5px;
+  font-weight: bold;
+}
+.form-link:hover {
+  text-decoration: underline;
+}
+.form-container {
+  width: 100%;
+  margin-top: 24px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: #ebe8e8;
+  padding: 35px;
+  border-radius: 2%;
 }
-
-.App-link {
-  color: #61dafb;
+.form-input-field {
+  font-size: 16px;
+  border-radius: 4px;
+  height: 44px;
+  width: 100%;
+  margin-bottom: 4px;
+  border: 1px solid #1A1C1A;
+  text-indent: 10px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (min-width: 960px) {
+  .form-wrapper {
+    padding: 56px 100px;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+/* viewports */
+@media screen and (max-width: 1000px) {
+  .child {
+    width: 60%;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 800px) {
+  .child {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 700px) {
+  .child {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 600px) {
+  .child {
+    width: 90%;
+    margin: 0 auto;
   }
 }

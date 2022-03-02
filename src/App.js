@@ -1,18 +1,15 @@
-import './App.css';
-import React, { useEffect, useState } from 'react';
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  NavLink
-} from "react-router-dom";
-import BBCNewsCard from './News/BBCNewsCard';
-import CNN from './News/CNN';
-import TechCrunch from './News/TechCrunch';
-import Navbar from './Navbar';
-import Login from './Login';
+import './App.css'
+import React, { useEffect, useState } from 'react'
+import { Routes, Route } from "react-router-dom"
+import BBCNewsCard from './News/BBCNewsCard'
+import CNN from './News/CNN'
+import TechCrunch from './News/TechCrunch'
+import Navbar from './Navbar'
+import Login from './Login'
+import Signup from'./Signup'
 
-/*[x] create an app that uses react hooks to get API data and display it on webpage
+/* news feed checklist
+  [x] create an app that uses react hooks to get API data and display it on webpage
   [x] create a function or dynamic onclick to change url of API call for different
     news components or create separate API calls for each news source.
   [x] each news card onclick should direct to news source
@@ -22,6 +19,7 @@ import Login from './Login';
   [] create navbar with logo and responsive design
   [] create login page with form validation
   [] create footer component
+  [] use font awesome for use in navbar, add cool icons for login link
   */
 function App() {
   const [newsData, setNewsData] = useState([]);
@@ -67,10 +65,11 @@ date = (today.getMonth() + 1) + '-' + today.getDate() + '-' + today.getFullYear(
       <Navbar />
         <div className='child'>
           <Routes>
-            <Route path="/bbc" element={<BBCNewsCard newsData={newsData} date={date}/>} />
+            <Route path="/" element={<BBCNewsCard newsData={newsData} date={date}/>} />
             <Route path="/cnn" element={<CNN date={date} newsData2={newsData2}/> } />
             <Route path="/techcrunch" element={<TechCrunch newsData3={newsData3} date={date}/>} />
             <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
           </Routes>
         </div>
     </div>
